@@ -1,0 +1,33 @@
+header {
+  background-image: none;
+  @include background();
+  background: $black;
+  position: fixed;
+  top: 0;
+  height: $header-height;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: $white;
+    margin: 0;
+    text-align: center;
+    flex-grow: 8;
+  }
+  button {
+    color: $white;
+    font-size: 1.5rem;
+    flex-grow: 1;
+    &.menu {
+      text-align: left;
+      padding-left: 10px;
+    }
+    &.exit {
+      text-align: right;
+      padding-right: 10px;
+    }
+  }
+}
