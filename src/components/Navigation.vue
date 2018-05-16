@@ -33,7 +33,7 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 nav {
   position: absolute;
   bottom: 5px;

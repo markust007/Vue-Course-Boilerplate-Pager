@@ -26,7 +26,12 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
-            'scss': 'vue-style-loader!css-loader!sass-loader',
+            'scss': ['vue-style-loader', 'css-loader', 'sass-loader', {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: path.resolve(__dirname, './src/scss/vars.scss')
+              }
+            }],
             'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
           }
           // other vue-loader options go here
@@ -52,7 +57,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           //resolve-url-loader may be chained before sass-loader if necessary
-          use: ['css-loader', 'sass-loader']
+          use: ['css-loader', 'postcss-loader', 'sass-loader']
         }),
 				include: SRC_DIR
 			}, {

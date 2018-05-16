@@ -5,9 +5,9 @@
 import {elementInViewport} from '../utils/viewport.js';
   export default {
     mounted() {
-      var self = this
-      let section1 = document.getElementById("section1");
-      let section2 = document.getElementById("section2");
+      const self = this
+      const section1 = document.getElementById("section1");
+      const section2 = document.getElementById("section2");
 
       self.$store.commit("scormLMS/changeUserLocation", "Section 1");
 
@@ -22,5 +22,4 @@ import {elementInViewport} from '../utils/viewport.js';
       }
     }
   }
-
 </script>

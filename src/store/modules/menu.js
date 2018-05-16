@@ -1,5 +1,4 @@
 export const menu = {
-
   namespaced: true,
   state: {
     menu: false

@@ -10,7 +10,6 @@
   export default {
     data() {
       return {
-
       }
     },
     computed: {
@@ -30,7 +29,7 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 button {
   width: 24px;
 }

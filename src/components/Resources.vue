@@ -14,11 +14,9 @@
   export default {
     data() {
       return {
-
       }
     },
     methods: {
-
     },
     components: {},
     props: ['items']
@@ -26,7 +24,7 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .resources {
     position: absolute;
     top: 50px;

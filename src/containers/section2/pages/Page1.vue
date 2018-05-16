@@ -37,7 +37,7 @@ export default {
     }
   },
   mounted() {
-    
+
   },
   beforeDestroy() {
     //BOILERPLATE FOR RUNNING AN INTERVAL
@@ -48,6 +48,6 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

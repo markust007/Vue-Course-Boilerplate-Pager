@@ -7,7 +7,6 @@ var lesson_location;
 scorm.version = "1.2";
 
 export const scormLMS = {
-
   namespaced: true,
   state: {
     location: 1,
@@ -22,7 +21,7 @@ export const scormLMS = {
     scormInit(state) {
       lmsConnected = scorm.init();
       if(lmsConnected){
-        if(scorm.version = "1.2") {
+        if(scorm.version === "1.2") {
           learnername = scorm.get("cmi.core.student_name");
           var courseLoc = scorm.get("cmi.core.lesson_location");
           var globalLocation = parseInt(courseLoc);
@@ -51,7 +50,7 @@ export const scormLMS = {
       }
 		},
     scormScore(state, value) {
-      if(scorm.version = "1.2") {
+      if(scorm.version === "1.2") {
         scorm.set("cmi.core.score.min", 0);
         scorm.set("cmi.core.score.max", 10);
         scorm.set("cmi.core.score.raw", value);
@@ -62,7 +61,7 @@ export const scormLMS = {
       }
     },
     scormComplete(state) {
-      if(scorm.version = "1.2") {
+      if(scorm.version === "1.2") {
         scorm.set("cmi.core.lesson_status", "passed");
         scorm.save();
         scorm.quit();
@@ -73,7 +72,7 @@ export const scormLMS = {
       }
 		},
     scormExit(state) {
-      if(scorm.version = "1.2") {
+      if(scorm.version === "1.2") {
         scorm.set("cmi.core.lesson_location", state.location);
         scorm.save();
         scorm.quit();

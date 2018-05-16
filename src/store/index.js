@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
 
 import { scormLMS } from './modules/scormLMS.js';
 import { menu } from './modules/menu.js';
+import { getData } from '../utils/http'
+const json = 'data/data.json';
+const config = 'data/config.json';
 
 Vue.use(Vuex)
 const store = new Vuex.Store({
@@ -12,7 +14,8 @@ const store = new Vuex.Store({
     menu
   },
   state: {
-    items: null
+    items: null,
+    config: null
   },
   actions: {
 
@@ -20,11 +23,18 @@ const store = new Vuex.Store({
   mutations: {
     setItems (state, value) {
       state.items = value;
+    },
+    setConfig (state, value) {
+      state.config = value;
     }
   }
 })
 export default store
-
+//SET DATA
+const items = 'setItems'
+const configData = 'setConfig'
+getData(json, store, items)
+getData(config, store, configData)
 
 var QueryString = function() {
     // This function is anonymous, is executed immediately and

@@ -1,19 +1,16 @@
 <template>
-  <section id="section1">
+  <section id="section2">
 
-    <page1 v-show="location === 1"></page1>
-    <page2 v-show="location === 2"></page2>
-
+    <Page1 v-show="location === 3"></Page1>
 
   </section>
 </template>
 
 <script>
-import page1 from './pages/Page1.vue'
-import page2 from './pages/Page2.vue'
+import Page1 from './pages/Page1.vue'
 
   export default {
-    data: function () {
+    data() {
       return {
 
       }
@@ -30,12 +27,12 @@ import page2 from './pages/Page2.vue'
 
     },
     components: {
-      page1, page2
+      Page1
     },
     props: []
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

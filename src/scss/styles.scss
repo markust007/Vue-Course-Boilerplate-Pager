@@ -5,17 +5,7 @@ Styles
 ============================================================ */
 
 // VARIABLES ====================
-$gray            : rgba(119, 120, 123, 1);
-$gray-light      : rgba(230, 231, 232, 1);
-$gray-dark       : rgba(88, 89, 91, 1);
-$black           : #000000;
-$white           : #ffffff;
-
-$max-width	     : 1010px;
-$section-height  : 660px;
-$header-height   : 50px;
-$footer-height   : 40px;
-
+@import "vars";
 
 // BOURBON
 // @import "bourbon";
@@ -24,16 +14,16 @@ $footer-height   : 40px;
 @import "_includes/fontawesome";
 
 // FONTS
-// @import "_includes/fonts";
+@import "_includes/fonts";
 
 // MIXINS
-@import "_includes/mixins";
+@import "./_includes/mixins";
 
 // BASE (global/site wide styles)
-@import "_includes/base";
+@import "./_includes/base";
 
 // USER INTERFACE (icons, buttons, forms, tabs, overlays, etc.)
-@import "_includes/buttons";
+@import "./_includes/buttons";
 
 // SECTIONS
 @import "_includes/sections/header";
