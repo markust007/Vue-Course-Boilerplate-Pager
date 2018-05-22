@@ -49,7 +49,15 @@ module.exports = {
 				test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: ['css-loader', 'postcss-loader']
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [require('autoprefixer')]
+              }
+            }
+          ]
         }),
 				include: SRC_DIR
 			}, {
@@ -57,7 +65,16 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           //resolve-url-loader may be chained before sass-loader if necessary
-          use: ['css-loader', 'postcss-loader', 'sass-loader']
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [require('autoprefixer')]
+              }
+            },
+            'sass-loader'
+          ]
         }),
 				include: SRC_DIR
 			}, {
@@ -67,7 +84,7 @@ module.exports = {
 			},
       {
 				test: /\.(woff|woff2|eot|ttf|svg)$/,
-				loader: 'file-loader?name=fonts/[name].[ext]',
+        loader: 'file-loader?name=fonts/[name].[ext]',
 				include: SRC_DIR
 			}
     ]
