@@ -1,6 +1,9 @@
 <template>
-  <section id="section2">
+  <section id="section3">
 
+    <p>
+      Section3
+    </p>
     <keep-alive>
       <component :is="comp"></component>
     </keep-alive>
@@ -10,11 +13,13 @@
 
 <script>
 import Page1 from './pages/Page1.vue'
+import Page2 from './pages/Page1.vue'
+import Page3 from './pages/Page1.vue'
 
   export default {
     data() {
       return {
-        index: 1
+        index: 2
       }
     },
     computed: {
@@ -47,7 +52,7 @@ import Page1 from './pages/Page1.vue'
 
     },
     components: {
-      Page1
+      Page1, Page2, Page3
     },
     props: []
   }

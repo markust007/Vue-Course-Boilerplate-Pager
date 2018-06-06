@@ -10,7 +10,7 @@
     data() {
       return {
         firstPage: 1,
-        lastPage: 3
+        lastPage: 9
       }
     },
     computed: {

@@ -1,4 +1,26 @@
 {
     "jira": true,
-    "scorm": "1.2"
+    "scorm": "1.2",
+    "sections": [
+      {
+        "section": 1,
+        "first": 1,
+        "pages": 2
+      },
+      {
+        "section": 2,
+        "first": 3,
+        "pages": 1
+      },
+      {
+        "section": 3,
+        "first": 4,
+        "pages": 3
+      },
+      {
+        "section": 4,
+        "first": 7,
+        "pages": 3
+      }
+    ]
 }
